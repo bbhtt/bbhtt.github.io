@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Pixels</title>
+    <link>https://bbhtt.github.io/posts/</link>
+    <description>Recent content in Posts on Pixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bbhtt.zn0i8@slmail.me (bbhtt)</managingEditor>
+    <webMaster>bbhtt.zn0i8@slmail.me (bbhtt)</webMaster>
+    <copyright>Copyright © 2023 bbhtt and contributors</copyright>
+    <lastBuildDate>Fri, 07 Jul 2023 13:38:10 +0530</lastBuildDate><atom:link href="https://bbhtt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A post</title>
+      <link>https://bbhtt.github.io/posts/post/</link>
+      <pubDate>Fri, 07 Jul 2023 13:38:10 +0530</pubDate>
+      <author>bbhtt.zn0i8@slmail.me (bbhtt)</author>
+      <guid>https://bbhtt.github.io/posts/post/</guid>
+      <description>Hello, world!</description>
+    </item>
+    
+  </channel>
+</rss>
