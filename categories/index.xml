@@ -1,0 +1,60 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Pixels</title>
+    <link>https://bbhtt.github.io/categories/</link>
+    <description>Recent content in Categories on Pixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bbhtt.zn0i8@slmail.me (bbhtt)</managingEditor>
+    <webMaster>bbhtt.zn0i8@slmail.me (bbhtt)</webMaster>
+    
+        <atom:link href="https://bbhtt.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello, World</title>
+      <link>https://bbhtt.github.io/posts/hello-world/</link>
+      <pubDate>Fri, 05 Apr 2024 09:32:40 +0530</pubDate>
+      <author>bbhtt.zn0i8@slmail.me (bbhtt)</author>
+      <guid>https://bbhtt.github.io/posts/hello-world/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;../cat.png&#34; alt=&#34;A cat standing on two legs with one hand on a bed and the other one stretched in the opposite direction - in a stuck position&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://bbhtt.github.io/about/</link>
+      <pubDate>Fri, 07 Jul 2023 12:44:33 +0530</pubDate>
+      <author>bbhtt.zn0i8@slmail.me (bbhtt)</author>
+      <guid>https://bbhtt.github.io/about/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;I’m Nobody! Who are you? Are you – Nobody – too? Then there’s a pair of us!&lt;/em&gt; ~ Emily Dickinson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hello, stranger!&lt;/p&gt;
+&lt;p&gt;My name is Boudhayan Bhattacharya but you may better know me by my online
+alias &lt;em&gt;bbhtt&lt;/em&gt;. I live in India and I&amp;rsquo;m currently doing Ph.D. in
+Mathematics. I teach for a living and I sometimes &lt;a href=&#34;https://github.com/bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;contribute&lt;/a&gt;
+&lt;a href=&#34;https://gitlab.com/bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;to&lt;/a&gt; various &lt;a href=&#34;https://en.wikipedia.org/wiki/Free_and_open-source_software&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;FOSS&lt;/a&gt;
+projects during my free time.&lt;/p&gt;
+&lt;p&gt;I like watching &lt;a href=&#34;https://letterboxd.com/bbhtt/films/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;movies&lt;/a&gt;, TV shows
+and &lt;a href=&#34;https://anidb.net/user/983003&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;anime&lt;/a&gt;; reading books and listening
+to &lt;a href=&#34;https://open.spotify.com/user/m18qz71984e1gjbkfbd36zwmi&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;music&lt;/a&gt; and
+podcasts. I play casual online chess sometimes, although I never studied
+it seriously. I&amp;rsquo;m also heavily addicted to YouTube.&lt;/p&gt;
+&lt;p&gt;This is a place for random things in life that I find interesting.&lt;/p&gt;
+&lt;p&gt;You can contact me via:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My &lt;a href=&#34;mailto:bbhtt.zn0i8@slmail.me&#34;&gt;email&lt;/a&gt; or any of the emails
+associated with my GPG key. My GPG key is &lt;a href=&#34;https://keys.openpgp.org/vks/v1/by-fingerprint/D26D753395009DB2B3B260940C3251A24745E484&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;D26D 7533 9500 9DB2 B3B2  6094 0C32 51A2 4745 E484&lt;/a&gt;
+(available through &lt;a href=&#34;https://keyserver.ubuntu.com/pks/lookup?search=0x0C3251A24745E484&amp;amp;fingerprint=on&amp;amp;op=index&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;other keyservers&lt;/a&gt;
+also) or available directly &lt;a href=&#34;../bbhtt.pub&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matrix.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[matrix]&lt;/a&gt;: &lt;a href=&#34;https://matrix.to/#/@bbhtt:matrix.org&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;@bbhtt:matrix.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;IRC: bbhtt on &lt;a href=&#34;ircs://irc.libera.chat/bbhtt,isuser&#34;&gt;Libera.chat&lt;/a&gt;, &lt;a href=&#34;ircs://irc.oftc.net/bbhtt,isuser&#34;&gt;OFTC&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
