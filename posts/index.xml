@@ -48,7 +48,7 @@ Patents like this are a blocker to shipping software dealing with the
 codec in the base runtime (since we want it usable by a wide variety of
 vendors and free of any legal grey areas) and unfortunately makes life
 difficult for everyone involved.&lt;/p&gt;
-&lt;p&gt;To workaround this and ship working software to users, 7 years ago, in
+&lt;p&gt;To workaround this and ship working software to users, 6 years ago, in
 2019 the precursor to the OpenH264 extension, called the
 &lt;a href=&#34;https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/commit/1c1d87eb7f1e7952bf79825cfb65225f3a3c3e30&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;html5-codecs extension&lt;/a&gt;
 was added to the Freedesktop runtime by Tom Coldrick. The idea was
@@ -60,10 +60,12 @@ opened an &lt;a href=&#34;https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/i
 to include &lt;a href=&#34;https://github.com/cisco/openh264&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Cisco&amp;rsquo;s OpenH264&lt;/a&gt;
 (commonly referred as &lt;code&gt;libopenh264&lt;/code&gt; too) as an extension to the runtime.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;libopenh264&lt;/code&gt; code is open source but due to the H.264 patents, no
-vendor is legally allowed to distribute their own binaries. The
-solution to this was to distribute Cisco&amp;rsquo;s unmodified binaries directly
-to the user which would effectively be free of any royalties but the
-catch is, the binaries have &lt;a href=&#34;https://www.openh264.org/BINARY_LICENSE.txt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;some license restrictions&lt;/a&gt;
+vendor is legally allowed to distribute their own binaries (some vendors
+build it themselves and hand it to Cisco but no one made that arrangement
+for us). The solution to this was to distribute Cisco&amp;rsquo;s unmodified
+binaries directly to the user which would effectively be free of any
+royalties but the catch is, the binaries have
+&lt;a href=&#34;https://www.openh264.org/BINARY_LICENSE.txt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;some license restrictions&lt;/a&gt;
 on them.&lt;/p&gt;
 &lt;p&gt;So Endless around that time, added &lt;a href=&#34;https://docs.flatpak.org/en/latest/module-sources.html#extra-data&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;extra-data&lt;/a&gt;
 support to Flatpak. This meant that the Flatpak extension metadata
@@ -260,7 +262,13 @@ once again, now to Fedora and they are looking for ways to make their
 own OpenH264 extension similar to how we did.&lt;/p&gt;
 &lt;p&gt;I hope the experience here helps anyone in the future wanting to maintain
 such an extension and this will also serve as a reminder to how much
-extra work patents like these causes.&lt;/p&gt;</description>
+extra work patents like these causes.&lt;/p&gt;
+&lt;p&gt;Lastly I&amp;rsquo;d like to thank Endless for giving us not only noopenh264 but
+also extra-data support in Flatpak that made all this possible;
+&lt;a href=&#34;https://gitlab.com/TheRealMichaelCatanzaro&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Michael Catanzaro&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/nanonyme&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Seppo Yli-Olli&lt;/a&gt;
+for maintaining this setup for a long time; &lt;a href=&#34;https://gitlab.com/valentindavid&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Valentin David&lt;/a&gt;
+for helping me in the last few days and everyone else who worked on this
+❤️ .&lt;/p&gt;</description>
     </item>
     
     <item>
