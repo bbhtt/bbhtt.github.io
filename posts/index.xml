@@ -75,9 +75,14 @@ to IJB last week. The review process takes quite a bit of time, so I&amp;rsquo;l
 have to wait and see how that goes. In the meantime, I&amp;rsquo;ve also been
 working on two more papers. One of them is essentially finished and I&amp;rsquo;ve
 sent it to my guide for feedback while I&amp;rsquo;ve just started working
-on the other one. This semester I&amp;rsquo;m also teaching a course on
-introductory ODEs and PDEs. I finished the ODE portion of the course
-last week. I used SL Ross&#39;
+on the other one. I think at this point I just want to get some
+publications, get the Doctorate and move on to doing my own research
+independently. I was meant to do the Ph.D. in Algebraic Topology as that
+was my specilisation during Masters but I didn&amp;rsquo;t find a guide for it and
+had to choose Mathematical Biology as a second option. My dream/wish
+is to do something in Algebraic Topology later on.&lt;/p&gt;
+&lt;p&gt;This semester I&amp;rsquo;m also teaching a course on introductory ODEs and PDEs.
+I finished the ODE portion of the course last week. I used SL Ross&#39;
 &lt;em&gt;Introduction to Ordinary Differential Equations&lt;/em&gt; as a reference which
 is a pretty standard introductory text on this. We covered definition,
 formation, classification and existence-uniqueness theorems in January.
@@ -139,7 +144,7 @@ Flatpak of OBS, I think it would have been reasonable for them to comply.
 Unfortunately that did not happen, and instead the OBS developers were
 harassed and strongly criticized. Since their preferred distribution
 channel was Flathub, it also got pulled into this mess. At the same
-time, a portion of the Fedora community pushed for enabling the Flathu
+time, a portion of the Fedora community pushed for enabling the Flathub
 remote by default. I think Fedora wanting to prefer and promote its own
 outputs to its users is perfectly reasonable. It is also reasonable if
 they do not want to enable Flathub by default and simply state that it
@@ -254,28 +259,31 @@ end up breaking hundreds of Flathub applications at once. Normally, in
 open source projects, I think after someone has contributed for a long
 time and invested significant time and effort, they should be given more
 responsibility and higher permissions, espcially since people with those
-are less active. That did not really happen here. Most of that control
-seems to remain concentrated among Codethink people, who generally do
-not maintain the SDK itself. This became a constant source of friction
-for me because I was one of the most active contributors and frequently
-needed to retrigger branch pipelines or perform other routine tasks.
-Over the past year or so I asked several times for my GitLab role to be
-bumped, and also suggested that other active contributors should
+are being less active. That did not really happen here. Most of that
+control seems to remain concentrated among Codethink people, who
+generally do not maintain the SDK itself. This became a constant source
+of friction for me because I was one of the most active contributors and
+frequently needed to retrigger branch pipelines or perform other routine
+tasks. Over the past year or so I asked several times for my GitLab role
+to be bumped, and also suggested that other active contributors should
 receive higher permissions as well. Unfortunately that never happened.
 The contributor who became inactive last year had been working on the
 project even longer than I had, and they also did not have the
-permissions they reasonably needed. Another recurring source of friction
-for me was how some development priorities were handled. Since the SDK
-is used as a base for certain Codethink products, they sometimes assign
-interns or engineers to work on features they need. This occasionally
-resulted in large patch sets, the integration of old or difficult to
-maintain software, or new CI jobs being added without sufficient
-maintenance capacity. I often pushed back on these changes because they
-increased the long term maintenance burden for me since I am doing most
-of it. At times it felt like there was more focus on meeting specific
-downstream needs than on maintainability and long term stability of the
-SDK itself. Nevertheless, I am grateful to Codethink for supporting
-the project through its infrastructure and engineering needs.&lt;/p&gt;
+permissions they reasonably needed. At one point I had to strongly
+protest giving &amp;ldquo;Developer&amp;rdquo; access to random Codethink people who never
+has/will contributed to the project and fortunately that stopped.&lt;/p&gt;
+&lt;p&gt;Another recurring source of friction for me was how some development
+priorities were handled. Since the SDK is used as a base for certain
+Codethink stuff, they sometimes assign interns or engineers to work on
+features they need. This occasionally resulted in large patch sets, the
+integration of old or difficult to maintain software, or new CI jobs
+being added without sufficient maintenance capacity. I often pushed back
+on these changes because they increased the long term maintenance burden
+for me since I am doing most of it. At times it felt like there was more
+focus on meeting specific downstream needs than on maintainability and
+long term stability of the SDK itself. Nevertheless, I am grateful to
+Codethink for supporting the project through its infrastructure and
+engineering needs.&lt;/p&gt;
 &lt;p&gt;The work here also includes several freedesktop-sdk related projects
 such as the mesa-git extension, the freedesktop-sdk Docker images, the
 binary seed, and various other pieces of tooling. Most of this work is
@@ -655,20 +663,20 @@ this ❤️&lt;/p&gt;</description>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;I’m Nobody! Who are you? Are you – Nobody – too? Then there’s a pair of us!&lt;/em&gt; ~ Emily Dickinson&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Hello and welcome to my little corner of the internet!&lt;/p&gt;
-&lt;p&gt;You might know me by my online alias, &lt;em&gt;bbhtt&lt;/em&gt;, which is just a blend of
-some letters of my real name, Boudhayan Bhattcharya. I live in India and
-completed my B.Sc. (Honours) in 2021 and M.Sc. in Mathematics in 2023.
-Currently, I&amp;rsquo;m pursuing a Ph.D. in Mathematics. I teach Mathematics
-for work and occasionally contribute to &lt;a href=&#34;https://en.wikipedia.org/wiki/Free_and_open-source_software&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;FOSS projects&lt;/a&gt;
+&lt;p&gt;Hello!&lt;/p&gt;
+&lt;p&gt;You might know me by my online alias, &lt;em&gt;bbhtt&lt;/em&gt;, which is somewhat of a
+clumsy attempt to derive a nickname from my real name, Boudhayan
+Bhattacharya. I live in India and I have completed my B.Sc. (Honours) in
+2021 and M.Sc. in Mathematics in 2023. Currently, I&amp;rsquo;m pursuing a Ph.D.
+in Mathematics. I teach Mathematics for work and contribute to &lt;a href=&#34;https://en.wikipedia.org/wiki/Free_and_open-source_software&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;FOSS projects&lt;/a&gt;
 during my free time.&lt;/p&gt;
-&lt;p&gt;I love watching &lt;a href=&#34;https://letterboxd.com/bbhtt/films/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;movies&lt;/a&gt;,
-TV shows, and &lt;a href=&#34;https://anidb.net/user/983003&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;anime&lt;/a&gt;, and I&amp;rsquo;m always
-listening to &lt;a href=&#34;https://open.spotify.com/user/m18qz71984e1gjbkfbd36zwmi&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;music&lt;/a&gt;.
-Although, most of the time, I&amp;rsquo;m lost in some random YouTube binge.&lt;/p&gt;
-&lt;p&gt;I also try to read books and play some games on &lt;a href=&#34;https://steamcommunity.com/id/bbhtt/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Steam&lt;/a&gt;
-every now and then, and sometimes I mess around with casual online chess
-on Lichess.&lt;/p&gt;
+&lt;p&gt;I love watching &lt;a href=&#34;https://www.imdb.com/user/ur212871697/ratings/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;movies and TV shows&lt;/a&gt;,
+&lt;a href=&#34;https://myanimelist.net/animelist/bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;anime&lt;/a&gt;, &lt;a href=&#34;https://mydramalist.com/dramalist/bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;K-dramas&lt;/a&gt;,
+and I&amp;rsquo;m almost always listening to &lt;a href=&#34;https://music.youtube.com/@bbhtt3305&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;music&lt;/a&gt;.
+Although, most of the time, I&amp;rsquo;m probably lost in some random YouTube
+binge. I also try to read (or listen to) books and play some games on
+&lt;a href=&#34;https://steamcommunity.com/id/bbhtt/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Steam&lt;/a&gt; every now and then, and
+occasionally mess around with casual online chess on Lichess.&lt;/p&gt;
 &lt;p&gt;You can contact me via:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Email: &lt;a href=&#34;mailto:bbhtt@bbhtt.in&#34;&gt;bbhtt@bbhtt.in&lt;/a&gt;. My GPG key
@@ -676,7 +684,7 @@ is &lt;a href=&#34;../bbhtt.pub&#34;&gt;D26D 7533 9500 9DB2 B3B2 6094 0C32 51A2 
 &lt;li&gt;&lt;a href=&#34;https://matrix.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[matrix]&lt;/a&gt;: &lt;a href=&#34;https://matrix.to/#/@bbhtt:matrix.org&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;@bbhtt:matrix.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;IRC: bbhtt on &lt;a href=&#34;ircs://irc.libera.chat/bbhtt,isuser&#34;&gt;Libera.chat&lt;/a&gt;, &lt;a href=&#34;ircs://irc.oftc.net/bbhtt,isuser&#34;&gt;OFTC&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Unless otherwise stated, all textual content here is licensed under
+&lt;p&gt;Unless otherwise stated, all content here is licensed under
 &lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;CC BY-NC-SA 4.0&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
