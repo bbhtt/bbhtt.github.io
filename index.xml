@@ -320,7 +320,7 @@ fixes, cleaned up parts of the issue tracker, and reviewed a couple of
 security patches.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m not really an expert in C, more so in GLib flavored C. I&amp;rsquo;m not really
 a software person either. The only formal programming I learned was
-basic Python during my bachelor&amp;rsquo;s in Mathematics. Most of what I know
+basic Python during my Bachelor&amp;rsquo;s in Mathematics. Most of what I know
 now I picked up by reading documentation, browsing issues, and looking
 at other people&amp;rsquo;s code online. So large C codebases like Flatpak with
 security boundaries and a long history of stability, and on which so
@@ -345,7 +345,12 @@ trying (and failing) to take some breaks. To &amp;ldquo;de-stress&amp;rdquo;, I&
 off notifications for several apps on my phone, and instead of checking
 emails daily like I used to, I now let them pile up for a few days
 before going through them. This leads to around 300-400 emails a week
-but whatever.&lt;/p&gt;
+but whatever. I think in my time, I&amp;rsquo;ve seen a lot of projects become
+inactive. As a result the community around it slowly wanes away, the
+project looses relevance and gets replaced by something else or becomes
+a graveyard. I don&amp;rsquo;t really want that to happen and that has been my
+main motivation for all this. Rather than writing something new, I try to
+contribute and help with existing things where possible.&lt;/p&gt;
 &lt;p&gt;After all of the above I hardly get any free time, but whenever I do I
 listen to a lot of &lt;a href=&#34;https://music.youtube.com/@bbhtt3305&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;music&lt;/a&gt; and
 watch YouTube. Sometime in late 2024 I fell into the K-pop rabbit hole
