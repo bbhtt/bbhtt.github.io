@@ -684,6 +684,15 @@ is &lt;a href=&#34;./bbhtt.pub&#34;&gt;D26D 7533 9500 9DB2 B3B2 6094 0C32 51A2 4
 &lt;li&gt;&lt;a href=&#34;https://matrix.org/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[matrix]&lt;/a&gt;: &lt;a href=&#34;https://matrix.to/#/@bbhtt:matrix.org&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;@bbhtt:matrix.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;IRC: bbhtt on &lt;a href=&#34;ircs://irc.libera.chat/bbhtt,isuser&#34;&gt;Libera.chat&lt;/a&gt;, &lt;a href=&#34;ircs://irc.oftc.net/bbhtt,isuser&#34;&gt;OFTC&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;The domain for this website is registered with
+&lt;a href=&#34;https://www.hostinger.com/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Hostinger&lt;/a&gt;, while DNS and TLS
+certificates are managed through &lt;a href=&#34;https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Cloudflare&lt;/a&gt;.
+The website itself is hosted as a static site on
+&lt;a href=&#34;https://docs.github.com/en/pages&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GitHub pages&lt;/a&gt;. No additional
+analytics have been enabled beyond those collected by these services by
+default (which cannot be disabled). Only Cloudflare among these services,
+provides visible analytics, an example of which can be found
+&lt;a href=&#34;./cloudflare_stats.png&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Unless otherwise stated, all content here is licensed under
 &lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;CC BY-NC-SA 4.0&lt;/a&gt;.&lt;/p&gt;
 </description>
