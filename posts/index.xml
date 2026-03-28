@@ -6,15 +6,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>CC BY-NC-SA 4.0</copyright>
-    <lastBuildDate>Sat, 28 Mar 2026 14:49:39 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 05:23:34 +0530</lastBuildDate>
     
         <atom:link href="https://bbhtt.in/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Notes</title>
+      <link>https://bbhtt.in/notes/</link>
+      <pubDate>Tue, 17 Mar 2026 11:42:50 +0530</pubDate>
+      
+      <guid>https://bbhtt.in/notes/</guid>
+      <description>&lt;p&gt;This is a place to share various teaching and study notes I often make.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../first-order-linear-ode.pdf&#34;&gt;First order linear ODE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../first-order-separable-ode.pdf&#34;&gt;First order separable ODE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../variation-of-parameters.pdf&#34;&gt;Variation of parameters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../modelling.pdf&#34;&gt;Modelling differential equations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../mic2-mid-sem-qs-2026.pdf&#34;&gt;MIC2 mid semester questions 2026&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../first-order-linear-pde.pdf&#34;&gt;First order Linear PDE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Diary#1</title>
       <link>https://bbhtt.in/posts/diary-1-1/</link>
-      <pubDate>Sat, 28 Mar 2026 14:49:39 +0530</pubDate>
+      <pubDate>Wed, 11 Mar 2026 05:23:34 +0530</pubDate>
       
       <guid>https://bbhtt.in/posts/diary-1-1/</guid>
       <description>&lt;p&gt;This will be the first post in what may become a series of occasional
@@ -388,24 +406,6 @@ Steam. I have been playing Dead Cells whenever I find time. So far, I’ve
 only managed to reach the Clock Room stage, but it has been fun.&lt;/p&gt;
 &lt;p&gt;I think that’s about it for this post. It ended up being quite a bit
 longer than I expected, but it was nice to reflect on things a bit.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://bbhtt.in/notes/</link>
-      <pubDate>Tue, 17 Mar 2026 11:42:50 +0530</pubDate>
-      
-      <guid>https://bbhtt.in/notes/</guid>
-      <description>&lt;p&gt;This is a place to share various teaching and study notes I often make.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../first-order-linear-ode.pdf&#34;&gt;First order linear ODE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../first-order-separable-ode.pdf&#34;&gt;First order separable ODE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../variation-of-parameters.pdf&#34;&gt;Variation of parameters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../modelling.pdf&#34;&gt;Modelling differential equations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../mic2-mid-sem-qs-2026.pdf&#34;&gt;MIC2 mid semester questions 2026&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../first-order-linear-pde.pdf&#34;&gt;First order Linear PDE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
     </item>
     
     <item>
