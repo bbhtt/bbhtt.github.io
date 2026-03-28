@@ -24,7 +24,7 @@
 &lt;li&gt;&lt;a href=&#34;../variation-of-parameters.pdf&#34;&gt;Variation of parameters&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../modelling.pdf&#34;&gt;Modelling differential equations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../mic2-mid-sem-qs-2026.pdf&#34;&gt;MIC2 mid semester questions 2026&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../first-order-linear-pde.pdf&#34;&gt;First oder Linear PDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../first-order-linear-pde.pdf&#34;&gt;First order Linear PDE&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -278,8 +278,8 @@ open source projects, I think after someone has contributed for a long
 time and invested significant time and effort, they should be given more
 responsibility and higher permissions, espcially since people with those
 are being less active. That did not really happen here. Most of that
-control seems to remain concentrated among Codethink people, who
-generally do not maintain the SDK itself. This became a constant source
+control seems to remain concentrated among a few people, who generally
+don&amp;rsquo;t really maintain the SDK itself. This became a constant source
 of friction for me because I was one of the most active contributors and
 frequently needed to retrigger branch pipelines or perform other routine
 tasks. Over the past year or so I asked several times for my GitLab role
@@ -288,7 +288,7 @@ receive higher permissions as well. Unfortunately that never happened.
 The contributor who became inactive last year had been working on the
 project even longer than I had, and they also did not have the
 permissions they reasonably needed. At one point I had to strongly
-protest giving &amp;ldquo;Developer&amp;rdquo; access to random Codethink people who never
+protest giving &amp;ldquo;Developer&amp;rdquo; access to internal Codethink people who never
 has/will contributed to the project and fortunately that stopped.&lt;/p&gt;
 &lt;p&gt;Another recurring source of friction for me was how some development
 priorities were handled. Since the SDK is used as a base for certain
