@@ -275,32 +275,28 @@ death threats, to just stop being on the internet and close all their
 emails.&lt;/p&gt;
 &lt;p&gt;I don’t really have a problem with people using LLMs as a learning aid,
 or for translations, or even for writing code - provided the output is
-not entirely “slop” and the person is willing to take full
-responsibility for it, including being open to feedback, staying
-sensibly engaged, and being present to fix issues. That, however, is
-not what’s happening here in general.&lt;/p&gt;
+not entirely “slop” and the person is not acting with malicious
+interests in mind and willing to take full responsibility for it,
+including being open to feedback, staying sensibly engaged, and being
+present to fix issues. That, however, is not what’s happening here in
+general.&lt;/p&gt;
 &lt;p&gt;I suspect most of these AI-generated submissions are aimed at padding
 CVs or GitHub profiles and generating revenue when paid apps become
 available. I also suspect that the people submitting them will rarely
 become sustained platform or FOSS contributors and while that’s not a
-requirement in any way, it is generally nice, and the applications
-itself will be buggy. When interest eventually fades, it will join the
-graveyard of unmaintained apps on EOL runtimes. I would be glad to be
-proven wrong on any of these and if that happens it will not be my
-&amp;ldquo;loss&amp;rdquo;, but rather a better application and, potentially, a new
-long-term contributor.&lt;/p&gt;
-&lt;p&gt;I suspect majority of these AI-slop submissions are created to boost CVs
-and GitHub profiles. The people submitting them will almost never become
-platform contributors (it&amp;rsquo;s not that is a requirement, but it&amp;rsquo;s nice),
-the applications will be buggy, and when they eventually loose
-interest, it will join the graveyard of unmaintained apps on EOL
-runtimes. I&amp;rsquo;d be happy to be proven otherwise and when that happens, it
-will not be my &amp;ldquo;loss&amp;rdquo;, but rather we got a better application and maybe
-even a platform contributor.&lt;/p&gt;
-&lt;p&gt;It seems that I’m being forced out of what I love, and I have no
-control over that. This is not something anyone should have to deal
-with. I try to be reasonable, but this has become increasingly
-difficult to deal with.&lt;/p&gt;
+requirement in any way, it is generally nice. I suspect that the
+applications themselves will be buggy and when all the interest
+eventually fades, it will join the graveyard of unmaintained apps on
+EOL runtimes. None of this is a requirement to create and distribute
+open source applications in way and it never should be. The entire
+contract is that there is none but all of this is generally nice. I
+would be glad to be proven wrong on any of these and if that happens it
+will not be my &amp;ldquo;loss&amp;rdquo;, but rather a better application
+and, potentially, a new long-term contributor.&lt;/p&gt;
+&lt;p&gt;Anyways, right now, it seems that I’m being forced out of what I love
+doing, and I have no control over that. This is not something anyone
+should have to deal with. I try to be reasonable, but this has become
+an increasingly difficult situation.&lt;/p&gt;
 &lt;p&gt;I’ve developed and maintain a number of GitHub actions in
 that repository (and in the flathub-infra org) to automate parts of the
 review process. The automation helps, but a large portion of the
