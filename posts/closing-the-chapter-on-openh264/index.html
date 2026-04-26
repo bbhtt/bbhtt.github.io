@@ -4,7 +4,7 @@
 <meta name="supported-color-schemes" content="light dark"><meta name="description" content="People might have noticed me talking about dropping OpenH264 from
 Freedesktop SDK.
 Here, I&rsquo;ll try to go a bit into the history, the timeline and what led
-to the final decision."><title>Closing the chapter on OpenH264&nbsp;&ndash;&nbsp;Pixels</title><link rel="stylesheet" href="../../css/core.min.a710a4b781ea98bd4d2fb40f08e494ad03081a371b69d0b1ce3de3cc2b91de8eeaebf97ebbe184de5dda805abf86aaff.css" integrity="sha384-pxCkt4HqmL1NL7QPCOSUrQMIGjcbadCxzj3jzCuR3o7q6/l&#43;u&#43;GE3l3agFq/hqr/"><meta name="twitter:card" content="summary">
+to the final decision."><title>Closing the chapter on OpenH264&nbsp;&ndash;&nbsp;Pixels</title><link rel="stylesheet" href="../../css/core.min.b2faf80ed123f6db67b2dc56be1d54ef7df757947646fecc3daaca8bb38671f390963cbcd16fb3f8f943d0115c24179d.css" integrity="sha384-svr4DtEj9ttnstxWvh1U7333V5R2Rv7MParKi7OGcfOQljy80W&#43;z&#43;PlD0BFcJBed"><meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Closing the chapter on OpenH264"><meta property="og:title" content="Closing the chapter on OpenH264">
 <meta property="og:description" content="People might have noticed me talking about dropping OpenH264 from
 Freedesktop SDK.
@@ -30,7 +30,10 @@ to the final decision.">
 <a href="https://gitlab.com/freedesktop-sdk/freedesktop-sdk"target="_blank" rel="noopener noreferrer">Freedesktop SDK</a>.
 Here, I&rsquo;ll try to go a bit into the history, the timeline and what led
 to the final decision.</p>
-<h2 id="a-bit-of-an-introduction">A bit of an introduction</h2>
+<h2 id="a-bit-of-an-introduction">
+  A bit of an introduction
+  <a href="#a-bit-of-an-introduction" class="anchor"></a>
+</h2>
 <p>If you are unfamiliar with the Freedesktop SDK project: it was born out
 of the initial <a href="https://github.com/flatpak/freedesktop-sdk-images"target="_blank" rel="noopener noreferrer">1.6 Flatpak runtime image</a>
 created by <a href="https://github.com/alexlarsson"target="_blank" rel="noopener noreferrer">Alexander Larsson</a> to
@@ -50,7 +53,10 @@ the <a href="https://gitlab.gnome.org/GNOME/gnome-build-meta/"target="_blank" re
 runtimes which are collectively used by 2000+ Flatpaks, while the
 bootable stack along with other parts forms the base for things like
 <a href="https://os.gnome.org/"target="_blank" rel="noopener noreferrer">GNOME OS</a>.</p>
-<h2 id="some-history">Some history</h2>
+<h2 id="some-history">
+  Some history
+  <a href="#some-history" class="anchor"></a>
+</h2>
 <p>H.264 is one of the <a href="https://www.cloudflare.com/learning/video/what-is-h264-avc/"target="_blank" rel="noopener noreferrer">most widely used</a>
 codecs today but unfortunately it is patented with several patents
 <a href="https://meta.wikimedia.org/wiki/Have_the_patents_for_H.264_MPEG-4_AVC_expired_yet%3F"target="_blank" rel="noopener noreferrer">still active</a>.
@@ -99,7 +105,10 @@ fallback. At runtime, if the user downloads the actual OpenH264
 extension, the stub library would get overridden by the library in
 extension through Flatpak&rsquo;s ld.so config and voilà, you have a working
 OpenH264 setup!</p>
-<h2 id="the-start-of-the-openh264-extension">The start of the openh264 extension</h2>
+<h2 id="the-start-of-the-openh264-extension">
+  The start of the openh264 extension
+  <a href="#the-start-of-the-openh264-extension" class="anchor"></a>
+</h2>
 <p>Following the gruelling details above, in August 2019, Tom Coldrick
 <a href="https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/1638"target="_blank" rel="noopener noreferrer">again added</a>
 this &ldquo;noopenh264&rdquo; library to the runtime and set up the extension point
@@ -130,7 +139,10 @@ against a fixed toolchain.</p>
 things that would make this process easier but it also meant the final
 extension was independent of the runtime API/ABI and was built on top
 of &ldquo;NoRuntime&rdquo;.</p>
-<h2 id="the-flaws-start-to-show-up">The flaws start to show up</h2>
+<h2 id="the-flaws-start-to-show-up">
+  The flaws start to show up
+  <a href="#the-flaws-start-to-show-up" class="anchor"></a>
+</h2>
 <p>This entire setup worked quite well for a long time despite some
 maintenance issues from Cisco. However there were some flaws.</p>
 <p>A while back I told that every vendor is forced to distribute binaries
@@ -156,7 +168,10 @@ version would only be able go to a new branch of the runtime.</p>
 considering the potential flaws, the entirety of the Flatpak user base
 would loose H.264 decoding and encoding support, so we had to live with
 the setup.</p>
-<h2 id="the-start-of-the-codecs-extra-extension">The start of the codecs-extra extension</h2>
+<h2 id="the-start-of-the-codecs-extra-extension">
+  The start of the codecs-extra extension
+  <a href="#the-start-of-the-codecs-extra-extension" class="anchor"></a>
+</h2>
 <p>Around June 2024 <code>gdk-pixbuf</code> due to a series of security issues,
 <a href="https://discourse.gnome.org/t/change-in-the-gdk-pixbuf-loaders-built-by-default-in-2-42-11/21845"target="_blank" rel="noopener noreferrer">dropped support</a>
 for a lot of &ldquo;fringe&rdquo; loaders. We immediately noticed the change as
@@ -218,7 +233,10 @@ like</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">add-ld-path</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
 </span></span></span></code></pre></div><p>in the manifest. <code>org.freedesktop.Platform.codecs-extra</code> will be
 automatically installed by the runtime and will be available to users.</p>
-<h2 id="dropping-the-openh264-extension">Dropping the openh264 extension</h2>
+<h2 id="dropping-the-openh264-extension">
+  Dropping the openh264 extension
+  <a href="#dropping-the-openh264-extension" class="anchor"></a>
+</h2>
 <p>The above <code>codecs-extra</code> change meant that we now didn&rsquo;t really have an
 use case for <code>org.freedesktop.Platform.openh264</code> since <code>codecs-extra</code>
 had FFMPEG&rsquo;s internal H.264 decoder and the <code>libx264</code> encoder.</p>
@@ -256,7 +274,10 @@ comfortable shipping the openH264 extension anymore. Thus it was
 <a href="https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/24871"target="_blank" rel="noopener noreferrer">dropped</a>
 for the master branch, which means there won&rsquo;t be any
 <code>org.freedesktop.Platform.openh264</code> extension or <code>noopenh264</code> for 25.08+.</p>
-<h2 id="epilogue">Epilogue</h2>
+<h2 id="epilogue">
+  Epilogue
+  <a href="#epilogue" class="anchor"></a>
+</h2>
 <p>Considering all things, I think and hope we made the correct decision
 and hopefully the new <code>org.freedesktop.Platform.codecs-extra</code> works
 out. <code>libx264, libx265</code> and others are built from source and there
