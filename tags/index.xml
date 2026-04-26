@@ -226,19 +226,41 @@ exhausting. It’s becoming harder to tell what’s malicious versus what’s
 submitted by someone with little to no understanding of software. To
 make matters worse, many LLM-generated submissions now look
 superficially “legitimate,” so each one takes extra time and effort to
-verify. A lot of submitters also seem overconfident, sometimes even
+verify. In a lot of cases, it&amp;rsquo;s not even apparently visible from
+comments, repository structure, commit details and hygiene, and someone
+has to audit the entire codebase, which is hardly possible or practical
+given the volume, for someone working full-time on this, let alone
+for volunteers.&lt;/p&gt;
+&lt;p&gt;A lot of submitters also seem overconfident, sometimes even
 entitled, as if their PRs are expected to be accepted. There’s often a
 lack of basic awareness that closing a PR means rejection, and some
-submissions will get rejected. As a result, closing PRs frequently
+submissions &lt;em&gt;will&lt;/em&gt; get rejected. As a result, closing PRs frequently
 leads to follow-up emails, DMs, or repeated submissions. These
-quickly escalate into arguments and, eventually, bans. I’ve even
-been pinged during important IRL situations (e.g., while undergoing a
-medical test). It seems that I’m being forced out of what I love
-, and I have no control over that. This is not something anyone should
-have to deal with. I don’t have a problem with people using AI as a
-learning tool. The issue is that what we usually get is unreviewed
-“AI slop” with no real human input or thought behind it. I try to be
-reasonable, but this has become increasingly difficult to deal with.&lt;/p&gt;
+quickly escalate into arguments and, eventually, bans. The class of
+&amp;ldquo;over-confident&amp;rdquo; AI slop generators, also have been writing various
+hitpieces on socials, crying injustice and flaming which has been extra
+annoying. I’ve even been pinged during important IRL situations
+(e.g., while undergoing a blood test).&lt;/p&gt;
+&lt;p&gt;I would have loved to place an outright ban on AI submissions, but
+some of the other reviewers/admins think otherwise, so I had &amp;ldquo;soften&amp;rdquo; up
+the original AI policy written by Hub a bit while still allowing us to
+block enough of the nonsense. This is because, if I block a submission
+and someone else just merges it anyway, it is &lt;em&gt;actively&lt;/em&gt; harmful to
+have a contradictory policy document up and make the internal
+dissidence public.&lt;/p&gt;
+&lt;p&gt;I’m also very frustrated that people from within our own circles started
+submitting AI-generated slop PRs to various FOSS projects. When
+an app maintainer raised concerns, I responded bluntly, asking to stop
+the slop spam PRs. The reply I got was that apparently I didn’t
+know what I was talking about, and that if it &amp;ldquo;physically hurts&amp;rdquo; me, I
+should just ignore it, which is about as fair as telling someone who is
+receving death threats, to just stop being on the internet and close
+all their emails. Shortly after this I stopped being active on
+my socials.&lt;/p&gt;
+&lt;p&gt;It seems that I’m being forced out of what I love, and I have no
+control over that. This is not something anyone should have to deal
+with. I try to be reasonable, but this has become increasingly
+difficult to deal with.&lt;/p&gt;
 &lt;p&gt;I’ve developed and maintain a number of GitHub actions in
 that repository (and in the flathub-infra org) to automate parts of the
 review process. The automation helps, but a large portion of the
