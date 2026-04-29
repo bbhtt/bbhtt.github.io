@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.126.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><meta name="description" content="This post summarizes some new features I recently added to the
+Flatpak PIP generator, along with some updates to other related
+generators."><title>Platform wheel support in Flatpak PIP Generator&nbsp;&ndash;&nbsp;Pixels</title><link rel="stylesheet" href="../../css/core.min.b2faf80ed123f6db67b2dc56be1d54ef7df757947646fecc3daaca8bb38671f390963cbcd16fb3f8f943d0115c24179d.css" integrity="sha384-svr4DtEj9ttnstxWvh1U7333V5R2Rv7MParKi7OGcfOQljy80W&#43;z&#43;PlD0BFcJBed"><meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Platform wheel support in Flatpak PIP Generator"><meta property="og:title" content="Platform wheel support in Flatpak PIP Generator">
+<meta property="og:description" content="This post summarizes some new features I recently added to the
+Flatpak PIP generator, along with some updates to other related
+generators.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bbhtt.in/posts/pip-generator-platform-wheels/">
+<meta property="og:image" content="https://bbhtt.in/og_image.png"><meta property="og:site_name" content="Pixels"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2026-04-29T15:21:34+05:30">
+<meta property="article:modified_time" content="2026-04-29T15:21:34+05:30">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<body><div id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="../../"><span class="site name">Pixels</span>
+            </a>
+        </span>
+        <div class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="../../notes">Notes</a><a class="nav item" href="../../about">About</a></nav></div></div>
+    </div></div>
+<div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Platform wheel support in Flatpak PIP Generator</h1><p class="article date">Apr 29, 2026</p></section>
+<article class="article markdown-body"><p>This post summarizes some new features I recently added to the
+Flatpak PIP generator, along with some updates to other related
+generators.</p>
+<h3 id="flatpak-pip-generator">
+  Flatpak PIP Generator
+  <a href="#flatpak-pip-generator" class="anchor"></a>
+</h3>
+<p>Flatpak PIP Generator is a tool that generates JSON or YAML Flatpak
+manifests from PyPI modules. It accepts a package name, a requirements
+file, or a pyproject.toml, and produces a manifest that can be included
+alongside an application’s Flatpak manifest to enable offline builds.</p>
+<p>The tool was originally developed by <a href="https://github.com/TingPing"target="_blank" rel="noopener noreferrer">Patrick</a>
+around 2020, at least according to the git history. Despite being the
+most widely used generator in the flatpak-builder-tools repository, it
+has historically had only a small number of contributors. I have been
+contributing to it since 2023, and after taking over maintenance of
+the flatpak-builder-tools repository last year, my level of involvement
+increased somewhat. One of the larger changes I introduced last year,
+was a codebase <a href="https://github.com/flatpak/flatpak-builder-tools/pull/453"target="_blank" rel="noopener noreferrer">modernisation effort</a>
+that added ruff for formatting and linting, along with mypy for type
+checking. It previously was not using any formatter, linter or type
+checker, and having these is quite essential nowadays to catch
+programmer mistakes.</p>
+<p>Historically, the PIP generator relied on universal wheels or source
+distributions from PyPI. This design choice favored building from
+source to avoid incompatibilities and issues with architecture-specific
+wheels. However, since then, the ecosystem has evolved, and many Python
+packages now include Rust components, often with Cargo.toml or
+Cargo.lock files but without vendored dependencies. As a result,
+building these packages introduced an additional step of generating
+manifests for Rust dependencies using flatpak-cargo-generator, which
+I also maintain. This complicates automated updates to the Python
+modules, as the sdist needs to be unpacked for the Cargo lockfile, then
+flatpak-cargo-generator needs to be pointed at it to regenerate
+the Cargo manifest, and finally, both changed manifests need to be
+included in the update.</p>
+<p>Therefore, since 2022, one of the <a href="https://github.com/flatpak/flatpak-builder-tools/issues/296"target="_blank" rel="noopener noreferrer">most requested features</a>
+has been support for architecture or platform-specific wheels. Another
+<a href="https://github.com/flatpak/flatpak-builder-tools/issues/202"target="_blank" rel="noopener noreferrer">related issue</a>
+was that some PyPI packages do not provide sdists or universal
+wheels, causing the generator to fail on them.</p>
+<p>Since taking over maintenance, I revisited these issues multiple times
+but lacked the time and bandwidth to address them. I was also aligned
+with the “build-from-source” approach, so I was not particularly
+motivated to prioritise it. However, I do believe that the lack of
+support for architecture or platform-specific wheels made Flatpak
+packaging difficult for newcomers, especially those unfamiliar with
+the complexities of Python build systems.</p>
+<p>This changed last month as I finally gathered the motivation to
+add the <a href="https://github.com/flatpak/flatpak-builder-tools/pull/524"target="_blank" rel="noopener noreferrer">feature</a>
+to the PIP generator. Within hours of implementing it, someone opened a
+PR proposing that platform-specific wheels be preferred over universal
+ones, as they can include optimized code paths. I was not entirely
+convinced by this approach, so instead I introduced an advanced
+option to specify the <a href="https://github.com/flatpak/flatpak-builder-tools/commit/b5df3e23c66cade641bbc38372c06e5edb5d167e"target="_blank" rel="noopener noreferrer">artifact policy</a>
+on a per-module basis.</p>
+<p>The platform wheel selection logic operates by querying PyPI metadata
+for all available artifacts of a given package version and filtering
+them based on compatibility with the target Flatpak runtime. A runtime
+argument is required to determine the supported platform and ABI tags.
+By default, sources are generated for both x86_64 and aarch64. If
+the runtime is unavailable for one architecture, the corresponding
+platform tags are inferred on a best-effort basis from the other. For
+each supported architecture, the resolver constructs a set of valid
+wheel tags and determines the associated Python version. Candidate
+wheels are then filtered to those matching the target architecture and
+evaluated against the runtime’s Python ABI. A strict compatibility
+check is attempted first, with a relaxed fallback if no suitable
+candidates are found. Among the compatible candidates, wheels are
+ranked by the number of matching tags, and the highest-scoring
+artifact is selected as the best fit. The resolver could have bugs
+or edge cases and PIP&rsquo;s own resolver is far more complex, but it has
+worked correctly, at least for the modules I tried and I haven&rsquo;t
+received any bug reports.</p>
+<p>Someone also opened an issue requesting support for requirements files
+with pinned hashes. The <code>requirements-parser</code> module used by the PIP
+generator is not very actively maintained and lacks several features,
+including parsing pinned hashes - it simply ignores them. I had been
+considering writing a replacement from scratch, but given time
+constraints, starting a new project from scratch seemed daunting.
+Instead, I implemented a <a href="https://github.com/flatpak/flatpak-builder-tools/commit/3f2844feb65672ceee37f2660c9d35ab342d5409"target="_blank" rel="noopener noreferrer">parser</a>
+directly within the PIP generator, which now handles pinned hashes.</p>
+<p>This approach was consistent with my earlier work, where I had already
+added support for <a href="https://github.com/flatpak/flatpak-builder-tools/commit/422e9eca6f8f1f4c7e760aea5e902890e6a5eba0"target="_blank" rel="noopener noreferrer">parsing platform markers</a>
+which <code>requirements-parser</code> also lacks.</p>
+<p>This burst of activity also led me to fix some bugs and add some
+smaller feature which are visible in the git log.</p>
+<h3 id="flatpak-node-generator">
+  Flatpak Node Generator
+  <a href="#flatpak-node-generator" class="anchor"></a>
+</h3>
+<p>I also took the opportunity to migrate the Flatpak Node Generator, which
+I also maintain (this is becoming a bit ridiculous!), to Python 3.10+.
+This enabled me to use some modern language features, particularly
+standard type hints.</p>
+<p>During this process, I fixed an issue where cache filenames could
+<a href="https://github.com/flatpak/flatpak-builder-tools/pull/515"target="_blank" rel="noopener noreferrer">exceed the 255-byte filesystem limit</a>,
+as they were derived directly from raw URLs. I introduced a hash-based
+caching scheme, along with a backwards-compatible migration
+to convert existing cache entries to the new format.</p>
+<p>The other issue was that the generator hardcoded an outdated
+node-gyp installVersion, with a note indicating it should
+eventually be detected automatically. As the value drifted out of
+sync with the SDK extension, this began causing build failures. This has
+now been addressed, and the version is <a href="https://github.com/flatpak/flatpak-builder-tools/commit/168ee2551783d65ed0778ba70cbb9ae733df557d"target="_blank" rel="noopener noreferrer">automatically detected</a>
+from the installed Node SDK extension.</p>
+<p>I also reviewed and merged a PR with <a href="https://github.com/flatpak/flatpak-builder-tools/pull/511"target="_blank" rel="noopener noreferrer">support for PNPM</a>,
+which was a long-requested feature, along with several follow-up fixes
+to that.</p>
+<p>I don’t think many people are using these new features, but please
+do test them out!</p></article>
+</div>
+<div class="article bottom">
+</div></div><footer id="footer"><div class="footer-wrap">
+    <p class="copyright">CC BY-NC-SA 4.0</p>
+    <p class="powerby">
+        <span>Powered&nbsp;by&nbsp;</span>
+        <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>
+        <span>&nbsp;&amp;&nbsp;</span>
+        <a href="https://github.com/bbhtt/hugo-notepadium" target="_blank" rel="noopener noreferrer">Notepadium</a></p>
+    <p>
+        <span>This website is 100% Javascript free</span>
+        <span style="display: block;">and performs no third party requests</span>
+    </p>
+    <br></div>
+<div class="footer-wrap">
+    <p class="socials"></p>
+    <a style="text-decoration : none" href="mailto:bbhtt@bbhtt.in">
+        <img src="../../mail.svg" alt="Email">
+    </a>
+    <a style="text-decoration : none" href="https://signal.me/#eu/kxfmfZ96Rdnf12nrRYbpfGAI8j_13m_7Cf9oEm8-0EfODBnUW35JoIxVVCHnqe46">
+        <img src="../../signal.svg" alt="Signal">
+    </a>
+    <a style="text-decoration : none" href="https://bbhtt.github.io/index.xml">
+        <img src="../../rss.svg" alt="Atom feed">
+    </a></div>
+<p style="text-align: center; margin-top: 5px;">
+        <a href="https://validator.w3.org/check/referer">
+            <img src="../../w3c-html5.png" alt="Valid HTML" height="30" width="70">
+        </a>
+    </p>
+</footer>
+  
+
+</body>
+
+</html>
