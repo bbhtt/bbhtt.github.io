@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.126.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><meta name="description" content="This most will summarise my FOSS activities over the last several
+months."><title>FOSS activities (April 2026)&nbsp;&ndash;&nbsp;Pixels</title><link rel="stylesheet" href="../../css/core.min.b2faf80ed123f6db67b2dc56be1d54ef7df757947646fecc3daaca8bb38671f390963cbcd16fb3f8f943d0115c24179d.css" integrity="sha384-svr4DtEj9ttnstxWvh1U7333V5R2Rv7MParKi7OGcfOQljy80W&#43;z&#43;PlD0BFcJBed"><meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FOSS activities (April 2026)"><meta property="og:title" content="FOSS activities (April 2026)">
+<meta property="og:description" content="This most will summarise my FOSS activities over the last several
+months.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bbhtt.in/posts/foss-activities-april-2026/">
+<meta property="og:image" content="https://bbhtt.in/og_image.png"><meta property="og:site_name" content="Pixels"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2026-04-29T16:45:34+05:30">
+<meta property="article:modified_time" content="2026-04-29T18:33:01+05:30">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<body><div id="header">
+    <div class="header wrap">
+        <span class="header left-side">
+            <a class="site home" href="../../"><span class="site name">Pixels</span>
+            </a>
+        </span>
+        <div class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="../../notes">Notes</a><a class="nav item" href="../../about">About</a></nav></div></div>
+    </div></div>
+<div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">FOSS activities (April 2026)</h1><p class="article date">Apr 29, 2026</p></section>
+<article class="article markdown-body"><p>This most will summarise my FOSS activities over the last several
+months.</p>
+<p>I would suggest reading these two posts for some major work that I did
+in this time period.</p>
+<ul>
+<li><a href="../../posts/flatpak-builder-lint-updates-april-2026">Some updates to Flatpak Builder Lint (April 2026)</a></li>
+<li><a href="../../posts/pip-generator-platform-wheels">Platform wheel support in Flatpak PIP Generator</a></li>
+</ul>
+<p>I will try to list below some more activities that do not belong in the
+above detailed posts.</p>
+<ul>
+<li>Reported and fixed a reproducibility bug in fwupd. See <a href="https://github.com/fwupd/fwupd/pull/10096"target="_blank" rel="noopener noreferrer">PR 10096</a>.</li>
+<li>Reported and provided a patch for a reproducibility bug in NASM. See <a href="https://github.com/netwide-assembler/nasm/issues/220"target="_blank" rel="noopener noreferrer">issue 220</a>.</li>
+<li>Reported a reproducibility bug in OVMF. See <a href="https://github.com/tianocore/edk2/issues/12360"target="_blank" rel="noopener noreferrer">issue 12360</a>.</li>
+<li>Migrated flatpak-github-actions to Node 24, and released version 6.7. See the <a href="https://github.com/flatpak/flatpak-github-actions/commits?author=bbhtt"target="_blank" rel="noopener noreferrer">commit log</a>.</li>
+<li>Merged several fixes to the Steam Flatpak package. See the <a href="https://github.com/flathub/com.valvesoftware.Steam/commits?author=bbhtt&amp;since=2026-02-28&amp;until=2026-03-31"target="_blank" rel="noopener noreferrer">commit log</a>.</li>
+<li>Addded various Flatpak docs. See the <a href="https://github.com/flatpak/flatpak-docs/commits?author=bbhtt"target="_blank" rel="noopener noreferrer">commit log</a>.</li>
+<li>Fixed pygtk build in shared-modules repo. See <a href="https://github.com/flathub/shared-modules/pull/460"target="_blank" rel="noopener noreferrer">PR 460</a>.</li>
+<li>PR to add more context to reqwest errors to flat-manager. See <a href="https://github.com/flatpak/flat-manager/pull/165"target="_blank" rel="noopener noreferrer">PR 165</a>.</li>
+<li>PR to migrate flathub::manifest key from metadata to the custom tag in flat-manager-hooks. See <a href="https://github.com/flathub-infra/flat-manager-hooks/pull/134"target="_blank" rel="noopener noreferrer">PR 134</a>.</li>
+<li>Several test fixes to flathub-external-data-checker. See the <a href="https://github.com/flathub-infra/flatpak-external-data-checker/commits?author=bbhtt"target="_blank" rel="noopener noreferrer">commit log</a>.
+Added a feature to include branch name in PR title and merged an old PR fixing the checker for rotating load-balanced URLs.
+PR to add support for robots.txt, see <a href="https://github.com/flathub-infra/flatpak-external-data-checker/pull/512"target="_blank" rel="noopener noreferrer">PR 512</a> which was a bunch of work.
+PR to support multiple <code>!=</code> constraints in the versions property, see <a href="https://github.com/flathub-infra/flatpak-external-data-checker/pull/510"target="_blank" rel="noopener noreferrer">PR 510</a>.
+PR to fix a freeze when async tasks do not get cancelled. See <a href="https://github.com/flathub-infra/flatpak-external-data-checker/pull/511"target="_blank" rel="noopener noreferrer">PR 511</a>.</li>
+<li>Reviewed 18 PRs to Flatpak itself and merged some</li>
+<li>20 merged PRs to flatpak-builder, 4 PRs waiting to be merged, a security fix. I will write more about this later.</li>
+<li>PR to libglnx to silence warnings around g_clear_fd. See the <a href="https://gitlab.gnome.org/GNOME/libglnx/-/commit/dbc0d4f5531d512b83e3b8ba1905d5d91f1fe781"target="_blank" rel="noopener noreferrer">commit</a>. I want to extend
+this to other parts of libglnx too and tests for it. I have two draft PRs for that waiting for feedback.</li>
+<li>Several bug fixes and new features to Flathub backend, see the <a href="https://github.com/flathub-infra/website/commits?author=bbhtt"target="_blank" rel="noopener noreferrer">commit log</a>. Reviewed a couple of PRs here too.</li>
+<li>Several bug fixes and new features to vorarbeiter, see the <a href="https://github.com/flathub-infra/vorarbeiter/commits?author=bbhtt"target="_blank" rel="noopener noreferrer">commit log</a>. Reviewed a PR to add support for the merge command.</li>
+<li>Created a new action to close stale Flathub submission PR, see the <a href="https://github.com/flathub/flathub/commits?author=bbhtt&amp;since=2026-02-28&amp;until=2026-03-31"target="_blank" rel="noopener noreferrer">commit log</a>.</li>
+<li>Updated several Flatpak packages I maintain, and the usual exception PR reviews.</li>
+<li>Usual Freedesktop SDK maintainance, I crossed the 4000 commit mark recently in just 3 years:</li>
+</ul>
+<pre tabindex="0"><code>git shortlog -sn --all --no-merges|head -4
+
+ 15884	freedesktop_sdk_updater
+  4071	bbhtt
+  2673	Seppo Yli-Olli
+</code></pre><p>I also wrote several proposals to improve maintainance of the SDK, see the <a href="https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/work_items?sort=created_date&amp;state=opened&amp;author_username=bbhtt&amp;first_page_size=100"target="_blank" rel="noopener noreferrer">open issues</a>, submitted a fix to <a href="https://gitlab.com/BuildStream/buildstream-plugins-community/-/merge_requests/433"target="_blank" rel="noopener noreferrer">buildstream-plugins-community</a>
+and joined some arguments with some people!</p>
+<p>That should be all.</p></article>
+</div>
+<div class="article bottom">
+</div></div><footer id="footer"><div class="footer-wrap">
+    <p class="copyright">CC BY-NC-SA 4.0</p>
+    <p class="powerby">
+        <span>Powered&nbsp;by&nbsp;</span>
+        <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>
+        <span>&nbsp;&amp;&nbsp;</span>
+        <a href="https://github.com/bbhtt/hugo-notepadium" target="_blank" rel="noopener noreferrer">Notepadium</a></p>
+    <p>
+        <span>This website is 100% Javascript free</span>
+        <span style="display: block;">and performs no third party requests</span>
+    </p>
+    <br></div>
+<div class="footer-wrap">
+    <p class="socials"></p>
+    <a style="text-decoration : none" href="mailto:bbhtt@bbhtt.in">
+        <img src="../../mail.svg" alt="Email">
+    </a>
+    <a style="text-decoration : none" href="https://signal.me/#eu/kxfmfZ96Rdnf12nrRYbpfGAI8j_13m_7Cf9oEm8-0EfODBnUW35JoIxVVCHnqe46">
+        <img src="../../signal.svg" alt="Signal">
+    </a>
+    <a style="text-decoration : none" href="https://bbhtt.github.io/index.xml">
+        <img src="../../rss.svg" alt="Atom feed">
+    </a></div>
+<p style="text-align: center; margin-top: 5px;">
+        <a href="https://validator.w3.org/check/referer">
+            <img src="../../w3c-html5.png" alt="Valid HTML" height="30" width="70">
+        </a>
+    </p>
+</footer>
+  
+
+</body>
+
+</html>

@@ -12,6 +12,57 @@
     
     
     <item>
+      <title>FOSS activities (April 2026)</title>
+      <link>https://bbhtt.in/posts/foss-activities-april-2026/</link>
+      <pubDate>Wed, 29 Apr 2026 16:45:34 +0530</pubDate>
+      
+      <guid>https://bbhtt.in/posts/foss-activities-april-2026/</guid>
+      <description>&lt;p&gt;This most will summarise my FOSS activities over the last several
+months.&lt;/p&gt;
+&lt;p&gt;I would suggest reading these two posts for some major work that I did
+in this time period.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./posts/flatpak-builder-lint-updates-april-2026&#34;&gt;Some updates to Flatpak Builder Lint (April 2026)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./posts/pip-generator-platform-wheels&#34;&gt;Platform wheel support in Flatpak PIP Generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will try to list below some more activities that do not belong in the
+above detailed posts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reported and fixed a reproducibility bug in fwupd. See &lt;a href=&#34;https://github.com/fwupd/fwupd/pull/10096&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PR 10096&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Reported and provided a patch for a reproducibility bug in NASM. See &lt;a href=&#34;https://github.com/netwide-assembler/nasm/issues/220&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;issue 220&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Reported a reproducibility bug in OVMF. See &lt;a href=&#34;https://github.com/tianocore/edk2/issues/12360&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;issue 12360&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Migrated flatpak-github-actions to Node 24, and released version 6.7. See the &lt;a href=&#34;https://github.com/flatpak/flatpak-github-actions/commits?author=bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit log&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Merged several fixes to the Steam Flatpak package. See the &lt;a href=&#34;https://github.com/flathub/com.valvesoftware.Steam/commits?author=bbhtt&amp;amp;since=2026-02-28&amp;amp;until=2026-03-31&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit log&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Addded various Flatpak docs. See the &lt;a href=&#34;https://github.com/flatpak/flatpak-docs/commits?author=bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit log&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Fixed pygtk build in shared-modules repo. See &lt;a href=&#34;https://github.com/flathub/shared-modules/pull/460&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PR 460&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;PR to add more context to reqwest errors to flat-manager. See &lt;a href=&#34;https://github.com/flatpak/flat-manager/pull/165&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PR 165&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;PR to migrate flathub::manifest key from metadata to the custom tag in flat-manager-hooks. See &lt;a href=&#34;https://github.com/flathub-infra/flat-manager-hooks/pull/134&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PR 134&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Several test fixes to flathub-external-data-checker. See the &lt;a href=&#34;https://github.com/flathub-infra/flatpak-external-data-checker/commits?author=bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit log&lt;/a&gt;.
+Added a feature to include branch name in PR title and merged an old PR fixing the checker for rotating load-balanced URLs.
+PR to add support for robots.txt, see &lt;a href=&#34;https://github.com/flathub-infra/flatpak-external-data-checker/pull/512&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PR 512&lt;/a&gt; which was a bunch of work.
+PR to support multiple &lt;code&gt;!=&lt;/code&gt; constraints in the versions property, see &lt;a href=&#34;https://github.com/flathub-infra/flatpak-external-data-checker/pull/510&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PR 510&lt;/a&gt;.
+PR to fix a freeze when async tasks do not get cancelled. See &lt;a href=&#34;https://github.com/flathub-infra/flatpak-external-data-checker/pull/511&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PR 511&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Reviewed 18 PRs to Flatpak itself and merged some&lt;/li&gt;
+&lt;li&gt;20 merged PRs to flatpak-builder, 4 PRs waiting to be merged, a security fix. I will write more about this later.&lt;/li&gt;
+&lt;li&gt;PR to libglnx to silence warnings around g_clear_fd. See the &lt;a href=&#34;https://gitlab.gnome.org/GNOME/libglnx/-/commit/dbc0d4f5531d512b83e3b8ba1905d5d91f1fe781&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit&lt;/a&gt;. I want to extend
+this to other parts of libglnx too and tests for it. I have two draft PRs for that waiting for feedback.&lt;/li&gt;
+&lt;li&gt;Several bug fixes and new features to Flathub backend, see the &lt;a href=&#34;https://github.com/flathub-infra/website/commits?author=bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit log&lt;/a&gt;. Reviewed a couple of PRs here too.&lt;/li&gt;
+&lt;li&gt;Several bug fixes and new features to vorarbeiter, see the &lt;a href=&#34;https://github.com/flathub-infra/vorarbeiter/commits?author=bbhtt&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit log&lt;/a&gt;. Reviewed a PR to add support for the merge command.&lt;/li&gt;
+&lt;li&gt;Created a new action to close stale Flathub submission PR, see the &lt;a href=&#34;https://github.com/flathub/flathub/commits?author=bbhtt&amp;amp;since=2026-02-28&amp;amp;until=2026-03-31&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;commit log&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Updated several Flatpak packages I maintain, and the usual exception PR reviews.&lt;/li&gt;
+&lt;li&gt;Usual Freedesktop SDK maintainance, I crossed the 4000 commit mark recently in just 3 years:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git shortlog -sn --all --no-merges|head -4
+
+ 15884	freedesktop_sdk_updater
+  4071	bbhtt
+  2673	Seppo Yli-Olli
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I also wrote several proposals to improve maintainance of the SDK, see the &lt;a href=&#34;https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/work_items?sort=created_date&amp;amp;state=opened&amp;amp;author_username=bbhtt&amp;amp;first_page_size=100&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;open issues&lt;/a&gt;, submitted a fix to &lt;a href=&#34;https://gitlab.com/BuildStream/buildstream-plugins-community/-/merge_requests/433&#34;target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;buildstream-plugins-community&lt;/a&gt;
+and joined some arguments with some people!&lt;/p&gt;
+&lt;p&gt;That should be all.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Some updates to Flatpak Builder Lint (April 2026)</title>
       <link>https://bbhtt.in/posts/flatpak-builder-lint-updates-april-2026/</link>
       <pubDate>Wed, 29 Apr 2026 16:45:34 +0530</pubDate>
