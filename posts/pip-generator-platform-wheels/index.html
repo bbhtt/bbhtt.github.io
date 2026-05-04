@@ -12,7 +12,7 @@ generators.">
 <meta property="og:url" content="https://bbhtt.in/posts/pip-generator-platform-wheels/">
 <meta property="og:image" content="https://bbhtt.in/og_image.png"><meta property="og:site_name" content="Pixels"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2026-04-29T15:21:34+05:30">
-<meta property="article:modified_time" content="2026-04-29T16:38:12+05:30">
+<meta property="article:modified_time" content="2026-05-04T23:11:39+05:30">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <body><div id="header">
     <div class="header wrap">
@@ -23,7 +23,7 @@ generators.">
         <div class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="../../notes">Notes</a><a class="nav item" href="../../about">About</a></nav></div></div>
     </div></div>
 <div id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Platform wheel support in Flatpak PIP Generator</h1><p class="article date">Apr 29, 2026</p></section>
+    <h1 class="article title">Platform wheel support in Flatpak PIP Generator</h1><p class="article date">Apr 29, 2026<span class="lastmod"> • edited May 4, 2026</span></p></section>
 <article class="article markdown-body"><p>This post summarizes some new features I recently added to the
 Flatpak PIP generator, along with some updates to other related
 generators.</p>
@@ -60,6 +60,15 @@ modules, as the sdist needs to be unpacked for the Cargo lockfile, then
 flatpak-cargo-generator needs to be pointed at it to regenerate
 the Cargo manifest, and finally, both changed manifests need to be
 included in the update.</p>
+<p>There is also the issue that PIP generator cannot reliably <a href="https://github.com/flatpak/flatpak-builder-tools/issues/380"target="_blank" rel="noopener noreferrer">determine build dependencies</a>
+of Python packages. <code>pip download</code> (which PIP generator uses) itself
+does not expose this information, and extracting it programmatically is
+non-trivial as it would require unpacking an sdist and parsing
+specifications such as <code>setup.py</code>, <code>pyproject.toml</code> etc to collect them.
+This limitation makes it hard to build and install a Python module
+from a sdist as a given module may have multiple build dependencies
+and each of them with their own, all of which needs to be manually
+collected into a Flatpak builder manifest.</p>
 <p>Therefore, since 2022, one of the <a href="https://github.com/flatpak/flatpak-builder-tools/issues/296"target="_blank" rel="noopener noreferrer">most requested features</a>
 has been support for architecture or platform-specific wheels. Another
 <a href="https://github.com/flatpak/flatpak-builder-tools/issues/202"target="_blank" rel="noopener noreferrer">related issue</a>
