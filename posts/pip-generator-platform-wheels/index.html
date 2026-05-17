@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.126.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><meta name="description" content="This post summarizes some new features I recently added to the
+<meta name="supported-color-schemes" content="light dark"><meta name="description" content="This post summarises some new features I recently added to the
 Flatpak PIP generator, along with some updates to other related
 generators."><title>Platform wheel support in Flatpak PIP Generator&nbsp;&ndash;&nbsp;Pixels</title><link rel="stylesheet" href="../../css/core.min.b2faf80ed123f6db67b2dc56be1d54ef7df757947646fecc3daaca8bb38671f390963cbcd16fb3f8f943d0115c24179d.css" integrity="sha384-svr4DtEj9ttnstxWvh1U7333V5R2Rv7MParKi7OGcfOQljy80W&#43;z&#43;PlD0BFcJBed"><meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Platform wheel support in Flatpak PIP Generator"><meta property="og:title" content="Platform wheel support in Flatpak PIP Generator">
-<meta property="og:description" content="This post summarizes some new features I recently added to the
+<meta property="og:description" content="This post summarises some new features I recently added to the
 Flatpak PIP generator, along with some updates to other related
 generators.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://bbhtt.in/posts/pip-generator-platform-wheels/">
 <meta property="og:image" content="https://bbhtt.in/og_image.png"><meta property="og:site_name" content="Pixels"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2026-04-29T15:21:34+05:30">
-<meta property="article:modified_time" content="2026-05-04T23:11:39+05:30">
+<meta property="article:modified_time" content="2026-05-17T10:18:10+05:30">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <body><div id="header">
     <div class="header wrap">
@@ -23,8 +23,8 @@ generators.">
         <div class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="../../notes">Notes</a><a class="nav item" href="../../about">About</a></nav></div></div>
     </div></div>
 <div id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Platform wheel support in Flatpak PIP Generator</h1><p class="article date">Apr 29, 2026<span class="lastmod"> • edited May 4, 2026</span></p></section>
-<article class="article markdown-body"><p>This post summarizes some new features I recently added to the
+    <h1 class="article title">Platform wheel support in Flatpak PIP Generator</h1><p class="article date">Apr 29, 2026<span class="lastmod"> • edited May 17, 2026</span></p></section>
+<article class="article markdown-body"><p>This post summarises some new features I recently added to the
 Flatpak PIP generator, along with some updates to other related
 generators.</p>
 <h3 id="flatpak-pip-generator">
@@ -40,7 +40,7 @@ around 2020, at least according to the git history. Despite being the
 most widely used generator in the flatpak-builder-tools repository, it
 has historically had only a small number of contributors. I have been
 contributing to it since 2023, and after taking over maintenance of
-the flatpak-builder-tools repository last year, my level of involvement
+the flatpak-builder-tools repository last year, my involvement
 increased somewhat. One of the larger changes I introduced last year,
 was a codebase <a href="https://github.com/flatpak/flatpak-builder-tools/pull/453"target="_blank" rel="noopener noreferrer">modernisation effort</a>
 that added ruff for formatting and linting, along with mypy for type
@@ -48,14 +48,14 @@ checking. It previously was not using any formatter, linter or type
 checker, and having these is quite essential nowadays to catch
 programmer mistakes.</p>
 <p>Historically, the PIP generator relied on universal wheels or source
-distributions from PyPI. This design choice favored building from
+distributions from PyPI. This design choice favoured building from
 source to avoid incompatibilities and issues with architecture-specific
 wheels. However, since then, the ecosystem has evolved, and many Python
 packages now include Rust components, often with Cargo.toml or
 Cargo.lock files but without vendored dependencies. As a result,
 building these packages introduced an additional step of generating
-manifests for Rust dependencies using flatpak-cargo-generator, which
-I also maintain. This complicates automated updates to the Python
+manifests for Rust dependencies using flatpak-cargo-generator (which
+I also maintain). This complicates automated updates to the Python
 modules, as the sdist needs to be unpacked for the Cargo lockfile, then
 flatpak-cargo-generator needs to be pointed at it to regenerate
 the Cargo manifest, and finally, both changed manifests need to be
@@ -63,8 +63,8 @@ included in the update.</p>
 <p>There is also the issue that PIP generator cannot reliably <a href="https://github.com/flatpak/flatpak-builder-tools/issues/380"target="_blank" rel="noopener noreferrer">determine build dependencies</a>
 of Python packages. <code>pip download</code> (which PIP generator uses) itself
 does not expose this information, and extracting it programmatically is
-non-trivial as it would require unpacking an sdist and parsing
-specifications such as <code>setup.py</code>, <code>pyproject.toml</code> etc to collect them.
+not trivial as it would require unpacking an sdist and parsing
+specifications such as <code>setup.py</code>, <code>pyproject.toml</code> etc. to collect them.
 This limitation makes it hard to build and install a Python module
 from a sdist as a given module may have multiple build dependencies
 and each of them with their own, all of which needs to be manually
@@ -76,8 +76,8 @@ was that some PyPI packages do not provide sdists or universal
 wheels, causing the generator to fail on them.</p>
 <p>Since taking over maintenance, I revisited these issues multiple times
 but lacked the time and bandwidth to address them. I was also aligned
-with the “build-from-source” approach, so I was not particularly
-motivated to prioritise it. However, I do believe that the lack of
+with the “build-from-source” camp, so I was not particularly
+motivated to prioritise it. However, I did believe that the lack of
 support for architecture or platform-specific wheels made Flatpak
 packaging difficult for newcomers, especially those unfamiliar with
 the complexities of Python build systems.</p>
@@ -115,8 +115,9 @@ considering writing a replacement from scratch, but given time
 constraints, starting a new project from scratch seemed daunting.
 Instead, I implemented a <a href="https://github.com/flatpak/flatpak-builder-tools/commit/3f2844feb65672ceee37f2660c9d35ab342d5409"target="_blank" rel="noopener noreferrer">parser</a>
 directly within the PIP generator, which now handles pinned hashes.</p>
-<p>This approach was consistent with my earlier work, where I had already
-added support for <a href="https://github.com/flatpak/flatpak-builder-tools/commit/422e9eca6f8f1f4c7e760aea5e902890e6a5eba0"target="_blank" rel="noopener noreferrer">parsing platform markers</a>
+<p>It&rsquo;s a bit annoying that all the parsing code had to live in the
+generator itself but I had to do this before as well when I added
+support for <a href="https://github.com/flatpak/flatpak-builder-tools/commit/422e9eca6f8f1f4c7e760aea5e902890e6a5eba0"target="_blank" rel="noopener noreferrer">parsing platform markers</a>
 which <code>requirements-parser</code> also lacks.</p>
 <p>This burst of activity also led me to fix some bugs and add some
 smaller feature which are visible in the git log.</p>
@@ -130,14 +131,15 @@ This enabled me to use some modern language features, particularly
 standard type hints.</p>
 <p>During this process, I fixed an issue where cache filenames could
 <a href="https://github.com/flatpak/flatpak-builder-tools/pull/515"target="_blank" rel="noopener noreferrer">exceed the 255-byte filesystem limit</a>,
-as they were derived directly from raw URLs. I introduced a hash-based
-caching scheme, along with a backwards-compatible migration
-to convert existing cache entries to the new format.</p>
+as they were derived directly from raw URLs. I added a hash-based
+caching scheme to solve this. Existing cache entries should get
+converted to the new format in a backwards-compatible manner.</p>
 <p>The other issue was that the generator hardcoded an outdated
-node-gyp installVersion, with a note indicating it should
-eventually be detected automatically. As the value drifted out of
-sync with the SDK extension, this began causing build failures. This has
-now been addressed, and the version is <a href="https://github.com/flatpak/flatpak-builder-tools/commit/168ee2551783d65ed0778ba70cbb9ae733df557d"target="_blank" rel="noopener noreferrer">automatically detected</a>
+node-gyp installVersion, with a comment in the code indicating it should
+eventually be detected automatically. Following the tradition, that
+never happened! So as the value drifted out of sync with the SDK
+extension, it began causing build failures. This has
+should now be addressed, and the version now is <a href="https://github.com/flatpak/flatpak-builder-tools/commit/168ee2551783d65ed0778ba70cbb9ae733df557d"target="_blank" rel="noopener noreferrer">automatically detected</a>
 from the installed Node SDK extension.</p>
 <p>I also reviewed and merged a PR with <a href="https://github.com/flatpak/flatpak-builder-tools/pull/511"target="_blank" rel="noopener noreferrer">support for PNPM</a>,
 which was a long-requested feature, along with several follow-up fixes
